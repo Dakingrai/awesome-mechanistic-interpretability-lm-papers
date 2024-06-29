@@ -6,12 +6,12 @@ Papers are organized following our **taxonomy (Figure 1)**.
 We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items for interested people using MI for their purposes.
 
 <div align="center">
-  <img src="images/taxonomy.png" />
+  <img src="images/taxonomy.png" width="200"/>
   <p>Figure 1: Taxonomy</p>
 </div>
 
 <div align="center">
-  <img src="images/roadmap.png" />
+  <img src="images/roadmap.png" width="200"/>
   <p>Figure 2: Beginner's Roadmap</p>
 </div>
 
