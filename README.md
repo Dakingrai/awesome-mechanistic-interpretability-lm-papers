@@ -1,6 +1,6 @@
 # awesome-mechanistic-interpretability-LM-papers
 
-This is a collection of awesome papers about Mechanistic Interpretability (MI) for Transformer-based Language Models (LMs), organized following our survey paper: [A Practical Review of Mechanistic Interpretability for Transformer-Based Language Models](https://github.com/Dakingrai/awesome-mechanistic-interpretability-lm-papers). 
+This is a collection of awesome papers about Mechanistic Interpretability (MI) for Transformer-based Language Models (LMs), organized following our survey paper: [A Practical Review of Mechanistic Interpretability for Transformer-Based Language Models](https://arxiv.org/pdf/2407.02646). 
 
 Papers are organized following our **taxonomy (Figure 1)**. 
 We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items for interested people using MI for their purposes.
@@ -22,7 +22,12 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 
 **How to Cite:** If you find our survey useful for your research, please cite our paper:
 ```
-TODO
+@article{rai2024practical,
+  title={A Practical Review of Mechanistic Interpretability for Transformer-Based Language Models},
+  author={Rai, Daking and Zhou, Yilun and Feng, Shi and Saparov, Abulhair and Yao, Ziyu},
+  journal={arXiv preprint arXiv:2407.02646},
+  year={2024}
+}
 ```
 
 ## Updates
