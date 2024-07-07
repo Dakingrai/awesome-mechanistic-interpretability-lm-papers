@@ -53,7 +53,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
     - [Learning Dynamics during LM Fine-Tuning](#finetuning)
   - [Applications of MI](#mi-application)
     - [Model Enhancement](#model-enhancement)
-      - [Knowledge Editing][#knowledge-editing]
+      - [Knowledge Editing](#knowledge-editing)
       - [LM Generation Steering](#lm-generation-steering)
     - [AI Safety](#ai-safety)
     - [Others](#others-application)
