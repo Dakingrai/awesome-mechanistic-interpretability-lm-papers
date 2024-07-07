@@ -34,6 +34,29 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 - June 2024: GitHub repository launched! Still under construction.
 
 ## Table of Contents
+- [Techniques](#mi-techniques)
+- [Evaluation](#evaluation)
+- [Findings and Applications](#findings)
+  - [Findings on features](#features)
+    - [Polysemanticity](#polysemanticity)
+    - [Superposition](#superposition)
+  - [Findings on circuits](#circuits)
+    - [Interpreting LM Behaviors](#lm-behavior-interpret)
+    - [Interpreting Transformer Components](#transformer-component-interpret)
+  - [Findings on Universality](#universality)
+  - [Findings on Model Capabilities](#model-capability-interpret)
+    - [In-context Learning](#in-context-learning)
+    - [Reasoning](#reasoning)
+    - [Others](#others-model-capabilities)
+  - [Findings on Learning Dynamics](#learning-dynamics)
+    - [Phase Changes during LM Training](#phase-changes)
+    - [Learning Dynamics during LM Fine-Tuning](#finetuning)
+  - [Applications of MI](#mi-application)
+    - [Model Enhancement](#model-enhancement)
+      - [Knowledge Editing][#knowledge-editing]
+      - [LM Generation Steering](#lm-generation-steering)
+    - [AI Safety](#ai-safety)
+    - [Others](#others-application)
 
 ## Paper Collection
 
