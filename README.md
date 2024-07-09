@@ -35,38 +35,57 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 
 ## Table of Contents
 - [Techniques](#mi-techniques)
-- [Evaluation](#evaluation)
 - [Findings and Applications](#findings)
-  - [Findings on features](#features)
-    - [Polysemanticity](#polysemanticity)
-    - [Superposition](#superposition)
+  - [Findings on Features](#features)
   - [Findings on circuits](#circuits)
     - [Interpreting LM Behaviors](#lm-behavior-interpret)
     - [Interpreting Transformer Components](#transformer-component-interpret)
   - [Findings on Universality](#universality)
   - [Findings on Model Capabilities](#model-capability-interpret)
-    - [In-context Learning](#in-context-learning)
-    - [Reasoning](#reasoning)
-    - [Others](#others-model-capabilities)
   - [Findings on Learning Dynamics](#learning-dynamics)
-    - [Phase Changes during LM Training](#phase-changes)
-    - [Learning Dynamics during LM Fine-Tuning](#finetuning)
   - [Applications of MI](#mi-application)
-    - [Model Enhancement](#model-enhancement)
-      - [Knowledge Editing](#knowledge-editing)
-      - [LM Generation Steering](#lm-generation-steering)
-    - [AI Safety](#ai-safety)
-    - [Others](#others-application)
+- [Tools](#tools)
 
 ## Paper Collection
 
 ### Techniques
-
-### Evaluation
-
+|  Paper  |      TL;DR    | 
+| :----- | :--------------: | 
+|  [interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens)  |   Proposed the "logit lens" technique, which can be used to project intermediate activations onto the vocabulary space for interpretation.      |
+|  [Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space](https://arxiv.org/pdf/2203.14680)  |   The paper showed that the "logit lens" can be used to project the second-layer of feed-forward parameter matrices to vocabulary space for interpretation.    | 
 ### Findings and Applications
+#### Findings on Features
+|  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
+| :----- | :--------------: | :--------------: | :--------------: | 
+|  [Softmax Linear Units](https://transformer-circuits.pub/2022/solu/index.html)  |   Visualization, Manual Analysis      |      N/A    |     The paper investigated the impact of changing the activation function in LMs from ReLU to the softmax linear unit on the polysemanticity of neurons.      |
+#### Findings on circuits
+##### Interpreting LM Behaviors
+|  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
+| :----- | :--------------: | :--------------: | :--------------: | 
+|  [In-context learning and induction heads.](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)  |   Zero-Knockout, Visualization      |      Faithfulness    |      The paper demonstrates the importance of induction heads for in-context learning.    |
+##### Interpreting Transformer Components
+|  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
+| :----- | :--------------: | :--------------: | :--------------: | 
+|  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization    |      N/A    |      The paper shows that the "Residual stream (RS)" of LMs can be viewed as a one-way communication channel that transfers information from earlier to later layers. Furthermore, the paper also showed that each attention head in the "Multi-headed attention (MHA)" sublayer in a layer operates independently and can be interpreted independently   |
+#### Findings on Universality
+|  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
+| :----- | :--------------: | :--------------: | :--------------: | 
+|  [Successor Heads: Recurring, Interpretable Attention Heads In The Wild](https://arxiv.org/pdf/2312.09230)  |  The paper finds an interpretable set of attention heads we call successor heads in models of many different scales and architectures. Successor heads are attention heads that perform incrementation in language models (e.g., monday -> tuesday, second -> third, etc.).      |      TL;DR    |      TL;DR    |
+#### Findings on Model Capabilities
+|  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
+| :----- | :--------------: | :--------------: | :--------------: | 
+|  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization      |      N/A    |      The paper discovered a circuit that implements the task of detecting and continuing repeated subsequences in the input (e.g., Mr D urs ley was thin and bold. Mr D -> urs)    |
+#### Findings on Learning Dynamics
+|  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
+| :----- | :--------------: | :--------------: | :--------------: | 
+|  [In-context learning and induction heads.](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)  |   Zero-Knockout, Visualization      |      Faithfulness    |      The paper shows that transformer-based LMs undergo a "phase change" early in training, during which induction heads form and simultaneously in-context learning improves dramatically.    |
+#### Applications of MI
+|  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
+| :----- | :--------------: | :--------------: | :--------------: | 
+|  [Locating and Editing Factual Associations in GPT](https://arxiv.org/pdf/2202.05262)  |   Activation Patching      |      Faithfulness    |      The paper used activation patching to localize components that are responsible for storing factual knowledge, and then edited the fact (e.g., replacing "Seattle" with "Paris") by only updating the parameters of those components    |
 
-### Opinions and Discussions
-
-### Other Resources
+### Tools
+|  Paper  |      TL;DR    | 
+| :----- | :--------------: |
+|  [CircuitsVis](https://github.com/TransformerLensOrg/CircuitsVis)  |  Library for attention visualization      | 
 
