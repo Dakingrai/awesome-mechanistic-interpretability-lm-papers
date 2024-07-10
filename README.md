@@ -102,18 +102,41 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 ##### Interpreting Transformer Components
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
-|  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization    |      N/A    |      The paper shows that the "Residual stream (RS)" of LMs can be viewed as a one-way communication channel that transfers information from earlier to later layers. Furthermore, the paper also showed that each attention head in the "Multi-headed attention (MHA)" sublayer in a layer operates independently and can be interpreted independently   |
-|  [Interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens) | | | |
+|  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization    |      N/A    |      The paper showed that the RS of LMs can be viewed as a one-way communication channel that transfers information from earlier to later layers. It also showed that each attention head in the MHA sublayer of a layer operates independently and can be interpreted independently. In addition, the paper discovered "copying heads" in MHA.|
+|  [Interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens) | | | The paper proposed to view the RS as an LM’s current "guess" for the output, which is iteratively refined layer-by-layer. |
+| [Copy suppression: Comprehensively understanding an attention head](https://arxiv.org/pdf/2310.04625) | | | The paper discovered "negative heads" in GPT2-small that were responsible for reducing the logit values of the tokens that have already appeared in the context. |
+| [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small](https://arxiv.org/pdf/2211.00593) | | | Found "previous token heads" and "duplicate token heads" in MHA. |
+| [In-context Learning and Induction Heads](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html) | | | Induction heads in MHA. |
+| [Successor Heads: Recurring, Interpretable Attention Heads In The Wild (ICLR'24)](https://openreview.net/forum?id=kvcbV8KQsi) | | | Successor heads in MHA. |
+| [Finding Neurons in a Haystack: Case Studies with Sparse Probing (TMLR'23)](https://openreview.net/pdf?id=JYs1R9IMJr) | | | FF sublayers are attributed for the majority of feature extraction. |
+| [Locating and editing factual associations in gpt (NeurIPS'22)](https://arxiv.org/pdf/2202.05262) | | | FF sublayers are responsible for storing pre-trained knowledge. |
+| [A Mechanistic Interpretation of Arithmetic Reasoning in Language Models using Causal Mediation Analysis (EMNLP'23)](https://aclanthology.org/2023.emnlp-main.435.pdf) | | | FF sublayers function for arithmetic computation. |
+| [Transformer Feed-Forward Layers Are Key-Value Memories (EMNLP'21)](https://aclanthology.org/2021.emnlp-main.446.pdf) | | | The paper viewed FF sublayers as key-value stores; they also demonstrated that earlier FF layers typically process shallow (syntactic or grammatical) input patterns, while later layers focus more on semantic patterns (e.g., text related to TV shows). |
 
 #### Findings on Universality
-|  Paper  | Techniques |      Evaluation    |     TL;DR     |
-| :----- | :--------------: | :--------------: | :--------------: 
-|  [Successor Heads: Recurring, Interpretable Attention Heads In The Wild](https://arxiv.org/pdf/2312.09230)  |      Visualization, Logit lens    |      N/A    | The paper identifies an interpretable set of attention heads, termed "successor heads", which perform incrementation in LMs (e.g., Monday -> Tuesday, second -> third) across various scales and architectures. 
+|  Paper  |  TL;DR     |
+| :----- | :--------------: |
+|  [Successor Heads: Recurring, Interpretable Attention Heads In The Wild](https://arxiv.org/pdf/2312.09230)  |    The paper identifies an interpretable set of attention heads, termed "successor heads", which perform incrementation in LMs (e.g., Monday -> Tuesday, second -> third) across various scales and architectures. |
+| [In-context Learning and Induction Heads](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html) | Paper found induction heads across multiple LMs. |
+| [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small](https://arxiv.org/pdf/2211.00593) | Paper found duplication heads across multiple LMs. |
+| [Circuit component reuse across tasks in transformer language models (ICLR'24)](https://openreview.net/forum?id=fpoAYV6Wsk) | Paper found that different circuits implementing different tasks (IOI and colored objects task) reuse the same components (e.g., induction head), demonstrating universality across tasks |
+| [The clock and the pizza: Two stories in mechanistic explanation of neural networks (NeurIPS'23)](https://openreview.net/forum?id=S5wmbQc1We) | Paper discovered that two LMs trained with different initialization can develop qualitatively different circuits for the modular addition task. |
+| [A toy model of universality: Reverse engineering how networks learn group operations (ICML'23)](https://openreview.net/pdf?id=jCOrkuUpss) | Paper found that LMs trained to perform group composition on finite groups with different random weight initializations on the same task do not develop similar representations and circuits. |
+| [Universal neurons in gpt2 language models](https://arxiv.org/pdf/2401.12181) | Paper found that only about 1-5% of neurons from GPT-2 models trained with random initialization exhibit universality. |
+
 
 #### Findings on Model Capabilities
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
-|  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization      |      N/A    |      The paper discovered a circuit that implements the task of detecting and continuing repeated subsequences in the input (e.g., Mr D urs ley was thin and bold. Mr D -> urs)    |
+|  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization      |      N/A    |  Paper studied a simplified case of In-Context Learning and discovered an induction circuit composed of attention heads with specialized roles (e.g., induction heads).  |
+| [In-context Learning and Induction Heads](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html) | | | In-Context Learning |
+| [Rethinking the Role of Scale for In-Context Learning: An Interpretability-based Case Study at 66 Billion Scale (ACL'23)](https://aclanthology.org/2023.acl-long.660.pdf) | | | In-Context Learning |
+| [Identifying Semantic Induction Heads to Understand In-Context Learning](https://arxiv.org/pdf/2402.13055) | | | The paper investigated few-shot ICL and identified "semantic induction heads", which, unlike prior induction heads, model the semantic relationship between the input and the output token (e.g., "I have a nice pen for writing. The pen is nice to" -> "write"). |
+| [A Mechanistic Interpretation of Arithmetic Reasoning in Language Models using Causal Mediation Analysis (EMNLP'23)](https://aclanthology.org/2023.emnlp-main.435.pdf) | | | The paper studied arithmetic reasoning and found that attention heads are responsible for transferring information from operand and operator tokens to the RS of the answer or output token, with FF modules subsequently calculating the answer token. |
+| [How to think step-by-step: A mechanistic understanding of chain-of-thought reasoning (TMLR'24)](https://openreview.net/pdf?id=uHLDkQVtyC) | | | The paper studied chain-of-thought (CoT) multi-step reasoning over fictional ontologies and found that LLMs seem to deploy multiple different neural pathways in parallel to compute the final answer. |
+| [An Investigation of Neuron Activation as a Unified Lens to Explain Chain-of-Thought Eliciting Arithmetic Reasoning of LLMs (ACL'24)](https://arxiv.org/pdf/2406.12288) | Logit Lens | Faithfulness | The paper investigated neuron activation as a unified lens to explain how CoT elicits arithmetic reasoning of LLMs, including phenomena that were only empirically discussed in prior work. |
+| [A Mechanistic Analysis of a Transformer Trained on a Symbolic Multi-Step Reasoning Task](https://arxiv.org/pdf/2402.11917) | | | The paper discovered an interpretable algorithm in LM for the task of pathfinding in trees. |
+
 
 #### Findings on Learning Dynamics
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
