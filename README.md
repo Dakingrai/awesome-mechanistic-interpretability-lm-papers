@@ -52,8 +52,11 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 ### Techniques
 |  Paper  |      Techniques    |      TL;DR    | 
 | :----- | :--------------: | :----- | 
-|  [interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens)  |      Logit lens    |   The paper proposed the "logit lens" technique, which can be used to project intermediate activations onto the vocabulary space for interpretation.      |
-|  [Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space](https://arxiv.org/pdf/2203.14680)  |      Logit lens    |   The paper showed that the "logit lens" can be used to project the second-layer of feed-forward parameter matrices to vocabulary space for interpretation.    | 
+|  [interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens)  |      Logit lens    |   The paper proposed the "logit lens" technique, which can be used to project intermediate activations into the vocabulary space for interpretation.      |
+|  [Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space](https://arxiv.org/pdf/2203.14680)  |      Logit lens    |   The paper showed that the "logit lens" can be used to project the second-layer of feed-forward parameter matrices into vocabulary space for interpretation.    | 
+|  [Analyzing Transformers in Embedding Space](https://arxiv.org/pdf/2209.02535)  |      Logit lens    |   The paper proposed a conceptual framework where all parameters of a trained Transformer are interpreted by projecting them into the vocabulary space.    |
+|  [Eliciting Latent Predictions from Transformers with the Tuned Lens](https://arxiv.org/pdf/2303.08112)  |      Logit lens    |   The paper proposed using trained affine probes before logit lens to improve reliability, where these probes are translators which are used to transform the intermediate activations to align with the representation space of the final layer.    |
+|  [Finding neurons in a haystack: Case studies with sparse probing]([https://arxiv.org/pdf/2311.04897](https://arxiv.org/pdf/2305.01610)))  |      Probing    |   The paper proposes a sparse probing technique to localize a feature to a neuron or set of neurons in activations.    |
 ### Evaluation
 |  Paper  |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: |  :----- |
