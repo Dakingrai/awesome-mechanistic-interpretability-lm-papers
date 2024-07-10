@@ -76,7 +76,13 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 #### Findings on Features
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
-|  [Softmax Linear Units](https://transformer-circuits.pub/2022/solu/index.html)  |   Visualization     |      N/A    |     The paper investigated the impact of changing the activation function in LMs from ReLU to the softmax linear unit on the polysemanticity of neurons.      |
+|  [Softmax Linear Units](https://transformer-circuits.pub/2022/solu/index.html)  |   Visualization     |      N/A    |     The paper investigated the impact of changing the activation function in LMs from ReLU to the softmax linear unit on the polysemanticity of neurons. It discovered "Base64 neurons" as an example. |
+| [Knowledge Neurons in Pretrained Transformers (ACL'22)](https://aclanthology.org/2022.acl-long.581.pdf) |  | Faithfulness | A gradient-based attribution score was designed, which discovered "knowledge neurons" in the FF layer of BERT.|
+| [Finding skill neurons in pre-trained transformer-based language models (EMNLP'22)](https://aclanthology.org/2022.emnlp-main.765.pdf) | | | "Skill neurons" in RoBERTa-base model. |
+| [Neurons in Large Language Models: Dead, N-gram, Positional](https://arxiv.org/pdf/2309.04827) | | | "Positional neurons". |
+| [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) | | | The paper confirmed the hypothesis of "superposition", where the authors showed that when features are sparse, the model tends to encode features in activation space using superposition. |
+| [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](https://transformer-circuits.pub/2023/monosemantic-features/index.html) | | | The paper employed SAEs to extract features from representations implying superposition. |
+
 #### Findings on circuits
 ##### Interpreting LM Behaviors
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
@@ -86,22 +92,27 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization    |      N/A    |      The paper shows that the "Residual stream (RS)" of LMs can be viewed as a one-way communication channel that transfers information from earlier to later layers. Furthermore, the paper also showed that each attention head in the "Multi-headed attention (MHA)" sublayer in a layer operates independently and can be interpreted independently   |
+
 #### Findings on Universality
 |  Paper  | Techniques |      Evaluation    |     TL;DR     |
 | :----- | :--------------: | :--------------: | :--------------: 
 |  [Successor Heads: Recurring, Interpretable Attention Heads In The Wild](https://arxiv.org/pdf/2312.09230)  |      Visualization, Logit lens    |      N/A    | The paper identifies an interpretable set of attention heads, termed "successor heads", which perform incrementation in LMs (e.g., Monday -> Tuesday, second -> third) across various scales and architectures. 
+
 #### Findings on Model Capabilities
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization      |      N/A    |      The paper discovered a circuit that implements the task of detecting and continuing repeated subsequences in the input (e.g., Mr D urs ley was thin and bold. Mr D -> urs)    |
+
 #### Findings on Learning Dynamics
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [In-context learning and induction heads.](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)  |   Zero-Knockout, Visualization      |      Faithfulness    |      The paper shows that transformer-based LMs undergo a "phase change" early in training, during which induction heads form and simultaneously in-context learning improves dramatically.    |
+
 #### Applications of MI
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [Locating and Editing Factual Associations in GPT](https://arxiv.org/pdf/2202.05262)  |   Activation Patching      |      Faithfulness    |      The paper used activation patching to localize components that are responsible for storing factual knowledge, and then edited the fact (e.g., replacing "Seattle" with "Paris") by only updating the parameters of those components    |
+
 
 ### Tools
 |  Paper  |      TL;DR    | 
