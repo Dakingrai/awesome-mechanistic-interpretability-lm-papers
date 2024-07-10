@@ -52,7 +52,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 ### Techniques
 |  Paper  |      Techniques    |      TL;DR    | 
 | :----- | :--------------: | :----- | 
-|  [interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens)  |      Logit lens    |   The paper proposed the "logit lens" technique, which can be used to project intermediate activations into the vocabulary space for interpretation.      |
+|  [Interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens)  |      Logit lens    |   The paper proposed the "logit lens" technique, which can be used to project intermediate activations into the vocabulary space for interpretation.      |
 |  [Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space](https://arxiv.org/pdf/2203.14680)  |      Logit lens    |   The paper showed that the "logit lens" can be used to project the second-layer of feed-forward parameter matrices into vocabulary space for interpretation.    | 
 |  [Analyzing Transformers in Embedding Space](https://arxiv.org/pdf/2209.02535)  |      Logit lens    |   The paper proposed a conceptual framework where all parameters of a trained Transformer are interpreted by projecting them into the vocabulary space.    |
 |  [Eliciting Latent Predictions from Transformers with the Tuned Lens](https://arxiv.org/pdf/2303.08112)  |      Logit lens    |   The paper proposed using trained affine probes before logit lens to improve reliability, where these probes are translators which are used to transform the intermediate activations to align with the representation space of the final layer.    |
@@ -88,10 +88,22 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [In-context learning and induction heads.](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)  |   Zero-ablation, Visualization      |      Faithfulness    |      The paper demonstrates the importance of induction heads for in-context learning.    |
+| [Towards automated circuit discovery for mechanistic interpretability (NeurIPS'23)](https://proceedings.neurips.cc/paper_files/paper/2023/file/34e1dbe95d34d7ebaf99b9bcaeb5b2be-Paper-Conference.pdf) | | | greater-than operations |
+| [A circuit for python docstrings in a 4-layer attention-only transformer](https://www.lesswrong.com/posts/u6KXXmKFbXfWzoAXn/a-circuit-for-python-docstrings-in-a-4-layer-attention-only) | | | Python docstring formatting |
+| [ Progress measures for grokking via mechanistic interpretability (ICLR'23)](https://arxiv.org/pdf/2301.05217) | | | modular addition |
+| [The clock and the pizza: Two stories in mechanistic explanation of neural networks (NeurIPS'23)](https://proceedings.neurips.cc/paper_files/paper/2023/file/56cbfbf49937a0873d451343ddc8c57d-Paper-Conference.pdf) | | | modular addition |
+| [Does circuit analysis interpretability scale? evidence from multiple choice capabilities in chinchilla](https://arxiv.org/pdf/2307.09458) | | | The paper identified the circuit used for the multiple-choice question-answering task on the 70B Chinchilla LLM. |
+| [Sparse feature circuits: Discovering and editing interpretable causal graphs in language models](https://arxiv.org/pdf/2403.19647) | | | |
+| [ Sparse autoencoders find highly interpretable features in language models (ICLR'24)](https://openreview.net/pdf?id=F76bwRSLeK) | | | Discovering circuits connecting SAE features. |
+| [Circuit component reuse across tasks in transformer language models (ICLR'24)](https://openreview.net/forum?id=fpoAYV6Wsk) | | | The paper showed that the same components are reused by different circuits to implement different tasks. |
+| [ Increasing trust in language models through the reuse of verified circuits](https://arxiv.org/pdf/2402.02619) | | | The paper showed that the same components are reused by different circuits to implement different tasks. |
+
+
 ##### Interpreting Transformer Components
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization    |      N/A    |      The paper shows that the "Residual stream (RS)" of LMs can be viewed as a one-way communication channel that transfers information from earlier to later layers. Furthermore, the paper also showed that each attention head in the "Multi-headed attention (MHA)" sublayer in a layer operates independently and can be interpreted independently   |
+|  [Interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens) | | | |
 
 #### Findings on Universality
 |  Paper  | Techniques |      Evaluation    |     TL;DR     |
