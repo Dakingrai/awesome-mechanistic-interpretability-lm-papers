@@ -60,8 +60,14 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 |  [Finding neurons in a haystack: Case studies with sparse probing](https://arxiv.org/pdf/2305.01610)  |      Probing    |   The paper proposes a sparse probing technique to localize a feature to a neuron or set of neurons in activations.    |
 |  [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](https://transformer-circuits.pub/2023/monosemantic-features/index.html#appendix-autoencoder-dataset)  |      SAE    |   The paper provides advice for training SAEs, including the architecture, dataset, and other hyperparameters.    |
 |  [Language models can explain neurons in language models](https://openaipublic.blob.core.windows.net/neuron-explainer/paper/index.html)  |      Automated Feature Explanation    |   The paper proposed using LLMs to generate feature labels automatically and a quantitative automatic explanation score to measure the quality of explanations.    |
-|  [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small](https://arxiv.org/pdf/2211.00593)  |      Mean-ablation    |   The paper proposes to use mean-ablation for activation and path patching.     |
+|  [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small](https://arxiv.org/pdf/2211.00593)  |      Mean-ablation, Path Patching    |   The paper proposes to use mean-ablation for activation and path patching.     |
 |  [Causal Scrubbing: a method for rigorously testing interpretability hypotheses [Redwood Research]](https://www.lesswrong.com/posts/JvZhhzycHu2Yd57RN/causal-scrubbing-a-method-for-rigorously-testing)  |      Random-ablation, Causal Scrubbing    |   The paper proposes random-ablation and causal ablation for evaluating the quality of mechanistic interpretation.     |
+|  [Locating and Editing Factual Associations in GPT](https://arxiv.org/pdf/2202.05262)  |      Activation Patching      |   The paper proposes to use activation patching to localize the layers that are responsible for the model’s factual predictions.     |
+|  [Localizing Model Behavior with Path Patching](https://arxiv.org/pdf/2304.05969)  |      Path Patching    |   The paper introduces path patching, a technique for localizing the important paths in a circuit.     |
+|  [Towards Automated Circuit Discovery for Mechanistic Interpretability](https://arxiv.org/pdf/2304.14997)  |      ACDC    |   The paper introduces ACDC algorithm  to automate the iterative localization process.     |
+|  [Attribution Patching: Activation Patching At Industrial Scale](https://www.neelnanda.io/mechanistic-interpretability/attribution-patching)  |      Attribution Patching (AtP)    |   The blog proposes attribution patching, an efficient technique to approximate the results of activation patching.     |
+|  [Attribution Patching Outperforms Automated Circuit Discovery](https://arxiv.org/pdf/2310.10348)  |      Edge Attribution Patching (EAP)    |   The paper introduces Edge Attribution Patching (EAP) as a more efficient alternative to ACDC for automatically identifying circuits.     |
+|  [AtP*: An efficient and scalable method for localizing LLM behavior to components](https://arxiv.org/pdf/2403.00745)  |      Attribution Patching    |   The paper introduces a variant of AtP called AtP∗ that addresses some failure mode of AtP.     |
 
 ### Evaluation
 |  Paper  |      Evaluation    |      TL;DR    | 
@@ -142,11 +148,17 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [In-context learning and induction heads.](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)  |   Zero-Knockout, Visualization      |      Faithfulness    |      The paper shows that transformer-based LMs undergo a "phase change" early in training, during which induction heads form and simultaneously in-context learning improves dramatically.    |
+|  [Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets](https://arxiv.org/pdf/2201.02177l)  |       |         |      The paper shows a phase change from memorization to generalization, for simple symbol manipulation tasks in the late stages of model training.    |
+|  [Progress measures for grokking via mechanistic interpretability (ICLR 2023)](https://arxiv.org/pdf/2301.05217)  |       |         |      The paper investigates the grokking phenomena during model training and shows that grokking, rather than being a sudden shift, consists of three continuous phases: memorization, circuit formation, and cleanup.    |
+|  [Explaining grokking through circuit efficiency](https://arxiv.org/pdf/2309.02390)  |       |         |      The paper investigates the grokking phenomena during model training.    |
+|  [Sudden Drops in the Loss: Syntax Acquisition, Phase Transitions, and Simplicity Bias in MLMs](https://arxiv.org/pdf/2309.07311)  |       |         |      The paper shows that sudden drops in the loss during training correspond to the acquisition of attention heads that recognize specific syntactic relation.    |
+|  [Unified View of Grokking, Double Descent and Emergent Abilities: A Perspective from Circuits Competition](https://arxiv.org/pdf/2402.15175)  |       |         |      The paper provided a unified explanation for grokking, double descent, and emergent abilities as a competition between memorization and generalization circuits.    |
 
 #### Applications of MI
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
-|  [Locating and Editing Factual Associations in GPT](https://arxiv.org/pdf/2202.05262)  |   Activation Patching      |      Faithfulness    |      The paper used activation patching to localize components that are responsible for storing factual knowledge, and then edited the fact (e.g., replacing "Seattle" with "Paris") by only updating the parameters of those components    |
+|  [Locating and Editing Factual Associations in GPT](https://arxiv.org/pdf/2202.05262)  |   Activation Patching      |      Faithfulness    |      The paper used activation patching to localize components that are responsible for storing factual knowledge, and then edited the fact (e.g., replacing "Seattle" with "Paris") by only updating the parameters of those components.    |
+|  [Dissecting Recall of Factual Associations in Auto-Regressive Language Models](https://arxiv.org/pdf/2202.05262)  |   Activation Patching      |      Faithfulness    |      The paper investigates how factual associations are stored and extracted internally in LMs, facilitating future research on knowledge localization and editing.     |
 
 
 ### Tools
