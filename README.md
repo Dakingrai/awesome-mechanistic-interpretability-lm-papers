@@ -71,7 +71,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 ### Evaluation
 |  Paper  |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: |  :----- |
-|  [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small](https://arxiv.org/pdf/2211.00593)  |      Faithfulness, Completeness, Minimality    |   The paper proposed ablation-based techniques for the faithfulness, completeness, and minimality evaluation of the discovered circuit.     |
+|  [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small (ICLR'23)](https://arxiv.org/pdf/2211.00593)  |      Faithfulness, Completeness, Minimality    |   The paper proposed ablation-based techniques for the faithfulness, completeness, and minimality evaluation of the discovered circuit.     |
 | [Softmax Linear Units](https://transformer-circuits.pub/2022/solu/index.html) | Faithfulness | For evaluation, the paper recruited human annotators to rate the interpretation of a feature based on its activations over texts. |
 | [Language models can explain neurons in language models](https://openai.com/index/language-models-can-explain-neurons-in-language-models/) | Faithfulness | The paper aimed to automate the faithfulness evaluation process. It introduced a quantitative automatic explanation score, specifically using a large LM to simulate activations based on the automatically generated labels and then comparing them with the ground-truth activations.|
 | [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](https://transformer-circuits.pub/2023/monosemantic-features/index.html) | Plausibility | The paper found that attributing a model behavior to polysemantic neurons may be less plausible as compared to monosemantic ones. |
@@ -83,10 +83,11 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [Softmax Linear Units](https://transformer-circuits.pub/2022/solu/index.html)  |   Visualization     |      N/A    |     The paper investigated the impact of changing the activation function in LMs from ReLU to the softmax linear unit on the polysemanticity of neurons. It discovered "Base64 neurons" as an example. |
 | [Knowledge Neurons in Pretrained Transformers (ACL'22)](https://aclanthology.org/2022.acl-long.581.pdf) |  | Faithfulness | A gradient-based attribution score was designed, which discovered "knowledge neurons" in the FF layer of BERT.|
-| [Finding skill neurons in pre-trained transformer-based language models (EMNLP'22)](https://aclanthology.org/2022.emnlp-main.765.pdf) | | | "Skill neurons" in RoBERTa-base model. |
-| [Neurons in Large Language Models: Dead, N-gram, Positional](https://arxiv.org/pdf/2309.04827) | | | "Positional neurons". |
+| [Finding skill neurons in pre-trained transformer-based language models (EMNLP'22)](https://aclanthology.org/2022.emnlp-main.765.pdf) | | Extrinsic Evaluation: model pruning, cross-task prompt transfer indicator| "Skill neurons" in RoBERTa-base model. |
+| [Neurons in Large Language Models: Dead, N-gram, Positional](https://arxiv.org/pdf/2309.04827) | Visualization | | "Positional neurons". |
 | [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) | | | The paper confirmed the hypothesis of "superposition", where the authors showed that when features are sparse, the model tends to encode features in activation space using superposition. |
-| [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](https://transformer-circuits.pub/2023/monosemantic-features/index.html) | | | The paper employed SAEs to extract features from representations implying superposition. |
+| [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](https://transformer-circuits.pub/2023/monosemantic-features/index.html) | SAE, Visualization, Automated Feature Explanation  | | The paper employed SAEs to extract features from representations implying superposition. |
+| [Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet](https://transformer-circuits.pub/2024/scaling-monosemanticity/) | SAE, Visualization, Automated Feature Explanation, Extrinsic Evaluation (LM Generation Steering)  | | The paper employed SAEs to extract features from representations implying superposition. |
 
 #### Findings on circuits
 ##### Interpreting LM Behaviors
