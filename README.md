@@ -49,7 +49,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 
 ## Paper Collection
 
-### Techniques
+### Techniques ([Back to Table of Contents](#table-of-contents))
 |  Paper  |      Techniques    |      TL;DR    | 
 | :----- | :--------------: | :----- | 
 |  [Interpreting GPT: the logit lens](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens)  |      Logit lens    |   The paper proposed the "logit lens" technique, which can be used to project intermediate activations into the vocabulary space for interpretation.      |
@@ -68,7 +68,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 |  [Attribution Patching Outperforms Automated Circuit Discovery](https://arxiv.org/pdf/2310.10348)  |      Edge Attribution Patching (EAP)    |   The paper introduced Edge Attribution Patching (EAP) as a more efficient alternative to ACDC for automatically identifying circuits.     |
 |  [AtP*: An efficient and scalable method for localizing LLM behavior to components](https://arxiv.org/pdf/2403.00745)  |      Attribution Patching    |   The paper introduced a variant of AtP called AtP∗ that addresses some failure mode of AtP.     |
 
-### Evaluation
+### Evaluation ([Back to Table of Contents](#table-of-contents))
 |  Paper  |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: |  :----- |
 |  [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small (ICLR'23)](https://arxiv.org/pdf/2211.00593)  |      Faithfulness, Completeness, Minimality    |   The paper proposed ablation-based techniques for the faithfulness, completeness, and minimality evaluation of the discovered circuit.     |
@@ -77,8 +77,8 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](https://transformer-circuits.pub/2023/monosemantic-features/index.html) | Plausibility | The paper found that attributing a model behavior to polysemantic neurons may be less plausible as compared to monosemantic ones. |
 
 
-### Findings and Applications
-#### Findings on Features
+### Findings and Applications ([Back to Table of Contents](#table-of-contents))
+#### Findings on Features ([Back to Table of Contents](#table-of-contents))
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [Softmax Linear Units](https://transformer-circuits.pub/2022/solu/index.html)  |   Visualization     |        |     The paper investigated the impact of changing the activation function in LMs from ReLU to the softmax linear unit on the polysemanticity of neurons. It discovered "Base64 neurons" as an example. |
@@ -93,7 +93,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | [ (tentatively) Found 600+ Monosemantic Features in a Small LM Using Sparse Autoencoders](https://www.lesswrong.com/posts/wqRqb7h6ZC48iDgfK/tentatively-found-600-monosemantic-features-in-a-small-lm) | SAE, Visualization | Faithfulness | The paper showed that the same components are reused by different circuits to implement different tasks. |
 | [ Sparse Autoencoders Find Highly Interpretable Features in Language Models (ICLR'24)](https://arxiv.org/pdf/2309.08600) | SAE, Visualization | Automated Explanation Score, Knockout | The paper employed SAEs to extract features from representations implying superposition. |
 
-#### Findings on circuits
+#### Findings on circuits ([Back to Table of Contents](#table-of-contents))
 ##### Interpreting LM Behaviors
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
@@ -123,7 +123,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | [A Mechanistic Interpretation of Arithmetic Reasoning in Language Models using Causal Mediation Analysis (EMNLP'23)](https://aclanthology.org/2023.emnlp-main.435.pdf) | | | FF sublayers function for arithmetic computation. |
 | [Transformer Feed-Forward Layers Are Key-Value Memories (EMNLP'21)](https://aclanthology.org/2021.emnlp-main.446.pdf) | | | The paper viewed FF sublayers as key-value stores; they also demonstrated that earlier FF layers typically process shallow (syntactic or grammatical) input patterns, while later layers focus more on semantic patterns (e.g., text related to TV shows). |
 
-#### Findings on Universality
+#### Findings on Universality ([Back to Table of Contents](#table-of-contents))
 |  Paper  |  TL;DR     |
 | :----- | :--------------: |
 |  [Successor Heads: Recurring, Interpretable Attention Heads In The Wild](https://arxiv.org/pdf/2312.09230)  |    The paper identifies an interpretable set of attention heads, termed "successor heads", which perform incrementation in LMs (e.g., Monday -> Tuesday, second -> third) across various scales and architectures. |
@@ -135,7 +135,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | [Universal neurons in gpt2 language models](https://arxiv.org/pdf/2401.12181) | Paper found that only about 1-5% of neurons from GPT-2 models trained with random initialization exhibit universality. |
 
 
-#### Findings on Model Capabilities
+#### Findings on Model Capabilities ([Back to Table of Contents](#table-of-contents))
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [A mathematical framework for transformer circuits](https://transformer-circuits.pub/2021/framework/index.html)  |   Visualization      |      N/A    |  Paper studied a simplified case of In-Context Learning and discovered an induction circuit composed of attention heads with specialized roles (e.g., induction heads).  |
@@ -148,7 +148,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | [A Mechanistic Analysis of a Transformer Trained on a Symbolic Multi-Step Reasoning Task](https://arxiv.org/pdf/2402.11917) | | | The paper discovered an interpretable algorithm in LM for the task of pathfinding in trees. |
 
 
-#### Findings on Learning Dynamics
+#### Findings on Learning Dynamics ([Back to Table of Contents](#table-of-contents))
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [In-context learning and induction heads](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)  |   Zero-Ablation, Visualization      |      Faithfulness    |      The paper showed that transformer-based LMs underwent a "phase change" early in training, during which induction heads formed and simultaneously in-context learning improved dramatically.    |
@@ -158,7 +158,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 |  [Unified View of Grokking, Double Descent and Emergent Abilities: A Perspective from Circuits Competition](https://arxiv.org/pdf/2402.15175)  |  Visualization     |   N/A      |      The paper provided a unified explanation for grokking, double descent, and emergent abilities as a competition between memorization and generalization circuits.  It particularly discussed the role of model size and extended the experiments to consider a multi-task learning paradigm.  |
 | [Fine-tuning enhances existing mechanisms: A case study on entity tracking (ICLR'24)](https://arxiv.org/pdf/2402.14811) | Path Patching, Activation Patching | Faithfulness, Completeness, Minimaliity | The paper investigated the underlying changes in mechanisms (e.g., task-relevant circuits) to understand performance enhancements in finetuned LMs. The authors found that fine-tuning does not fundamentally change the mechanisms but enhances existing ones. |
 
-#### Applications of MI
+#### Applications of MI ([Back to Table of Contents](#table-of-contents))
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
 |  [Locating and Editing Factual Associations in GPT (NeurIPS'22)](https://arxiv.org/pdf/2202.05262)  |   Activation Patching      |      Extrinsic    |      The paper used activation patching to localize components that are responsible for storing factual knowledge, and then edited the fact (e.g., replacing "Seattle" with "Paris") by only updating the parameters of those components.    |
@@ -173,7 +173,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small](https://arxiv.org/pdf/2211.00593) | Mean-Ablation, Path Patching | Faithfulness, Completeness, Minimality, Extrinsic | Designing adversarial examples for the IOI task. |
 | [Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models](https://arxiv.org/pdf/2403.19647) | SAE, Activation Patching | Faithfulness, Completeness, Extrinsic | The paper improved the generalization of classifiers by identifying and ablating spurious features that humans consider to be task-irrelevant. |
 
-### Tools
+### Tools ([Back to Table of Contents](#table-of-contents))
 |  Tool  |      TL;DR    | 
 | :----- | :--------------: |
 |  [CircuitsVis](https://github.com/TransformerLensOrg/CircuitsVis)  |  Library for attention visualization      | 
