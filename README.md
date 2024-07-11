@@ -34,17 +34,17 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 - June 2024: GitHub repository launched! Still under construction.
 
 ## Table of Contents
-- [Techniques](#mi-techniques)
+- [Techniques](#techniques)
 - [Evaluation](#evaluation)
-- [Findings and Applications](#findings)
-  - [Findings on Features](#features)
-  - [Findings on circuits](#circuits)
-    - [Interpreting LM Behaviors](#lm-behavior-interpret)
-    - [Interpreting Transformer Components](#transformer-component-interpret)
-  - [Findings on Universality](#universality)
-  - [Findings on Model Capabilities](#model-capability-interpret)
-  - [Findings on Learning Dynamics](#learning-dynamics)
-  - [Applications of MI](#mi-application)
+- [Findings and Applications](#findings-and-applications)
+  - [Findings on Features](#findings-on-features)
+  - [Findings on circuits](#findings-on-circuits)
+    - [Interpreting LM Behaviors](#interpreting-lm-behaviors)
+    - [Interpreting Transformer Components](#interpreting-transformer-components)
+  - [Findings on Universality](#findings-on-universality)
+  - [Findings on Model Capabilities](#findings-on-model-capabilities)
+  - [Findings on Learning Dynamics](#findings-on-learning-dynamics)
+  - [Applications of MI](#applications-of-mi)
 - [Tools](#tools)
 
 ## Paper Collection
@@ -148,12 +148,12 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 #### Findings on Learning Dynamics
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
 | :----- | :--------------: | :--------------: | :--------------: | 
-|  [In-context learning and induction heads.](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)  |   Zero-Knockout, Visualization      |      Faithfulness    |      The paper shows that transformer-based LMs undergo a "phase change" early in training, during which induction heads form and simultaneously in-context learning improves dramatically.    |
-|  [Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets](https://arxiv.org/pdf/2201.02177l)  |       |         |      The paper shows a phase change from memorization to generalization, for simple symbol manipulation tasks in the late stages of model training.    |
-|  [Progress measures for grokking via mechanistic interpretability (ICLR'23)](https://arxiv.org/pdf/2301.05217)  |       |         |      The paper investigates the grokking phenomena during model training and shows that grokking, rather than being a sudden shift, consists of three continuous phases: memorization, circuit formation, and cleanup.    |
-|  [Explaining grokking through circuit efficiency](https://arxiv.org/pdf/2309.02390)  |       |         |      The paper investigates the grokking phenomena during model training.    |
-|  [Sudden Drops in the Loss: Syntax Acquisition, Phase Transitions, and Simplicity Bias in MLMs](https://arxiv.org/pdf/2309.07311)  |       |         |      The paper shows that sudden drops in the loss during training correspond to the acquisition of attention heads that recognize specific syntactic relation.    |
-|  [Unified View of Grokking, Double Descent and Emergent Abilities: A Perspective from Circuits Competition](https://arxiv.org/pdf/2402.15175)  |       |         |      The paper provided a unified explanation for grokking, double descent, and emergent abilities as a competition between memorization and generalization circuits.    |
+|  [In-context learning and induction heads](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html)  |   Zero-Ablation, Visualization      |      Faithfulness    |      The paper showed that transformer-based LMs underwent a "phase change" early in training, during which induction heads formed and simultaneously in-context learning improved dramatically.    |
+|  [Progress measures for grokking via mechanistic interpretability (ICLR'23)](https://arxiv.org/pdf/2301.05217)  |  Visualization     |    Faithfulness     |      The paper investigated the grokking phenomena during model training and showed that grokking, rather than being a sudden shift, consisted of three continuous phases: memorization, circuit formation, and cleanup.    |
+|  [Explaining grokking through circuit efficiency](https://arxiv.org/pdf/2309.02390)  |    Visualization   |    N/A     |      The paper investigated the grokking phenomena as a consequence of models preferring the more efficient (in terms of parameter norm) "generalising circuits" over the less efficient "memorising circuits", and different training sizes (or the implied data complexities) lead to different efficiency cases. The paper also brought up the concepts of "ungrokking" and "semi-grokking".   |
+|  [Sudden Drops in the Loss: Syntax Acquisition, Phase Transitions, and Simplicity Bias in MLMs](https://arxiv.org/pdf/2309.07311)  |  Visualization     |    Faithfulness     |      The paper showed that sudden drops in the loss during training corresponded to the acquisition of attention heads that recognized specific syntactic relation. Experiments were conducted on BERT.   |
+|  [Unified View of Grokking, Double Descent and Emergent Abilities: A Perspective from Circuits Competition](https://arxiv.org/pdf/2402.15175)  |  Visualization     |   N/A      |      The paper provided a unified explanation for grokking, double descent, and emergent abilities as a competition between memorization and generalization circuits.  It particularly discussed the role of model size and extended the experiments to consider a multi-task learning paradigm.  |
+| [Fine-tuning enhances existing mechanisms: A case study on entity tracking (ICLR'24)](https://arxiv.org/pdf/2402.14811) | Path Patching, Activation Patching | Faithfulness, Completeness, Minimaliity | The paper investigated the underlying changes in mechanisms (e.g., task-relevant circuits) to understand performance enhancements in finetuned LMs. The authors found that fine-tuning does not fundamentally change the mechanisms but enhances existing ones. |
 
 #### Applications of MI
 |  Paper  |      Techniques    |      Evaluation    |      TL;DR    | 
