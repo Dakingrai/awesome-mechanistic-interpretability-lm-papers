@@ -187,5 +187,13 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 ([Back to Table of Contents](#table-of-contents))
 |  Tool  |      TL;DR    | 
 | :----- | :-------------- |
-|  [CircuitsVis](https://github.com/TransformerLensOrg/CircuitsVis)  |  Library for attention visualization      | 
+|  [CircuitsVis](https://github.com/TransformerLensOrg/CircuitsVis)  |  A library for attention visualization      | 
+|  [TransformerLens](https://github.com/TransformerLensOrg/TransformerLens)  |  A library for doing MI of GPT-2 Style language models.  | 
+|  [CircuitsVis](https://github.com/openai/transformer-debugger)  |  A tool that supports investigations into specific behaviors of small language models. The tool combines automated interpretability techniques with sparse autoencoders.     | 
+|  [LM Debugger](https://github.com/mega002/lm-debugger)  |  An open-source interactive tool for inspection and intervention in transformer-based language models.    | 
+|  [Neuroscope](https://neuroscope.io)  |  Repository of maximum activating dataset examples for each neuron in several LMs      | 
+|  [Neuronpedia](https://www.neuronpedia.org)  |  A platform for MI research, specifically focusing on SAEs, that allows researchers to host models, create feature dashboards, visualize data, and access various tools.     |
+|  [Pyvene](https://github.com/stanfordnlp/pyvene/tree/main)  |   A Library for Understanding and Improving PyTorch Models via Interventions    |
+|  [nninsight](https://github.com/ndif-team/nnsight)  |   A library that enables interpreting and manipulating the internals of deep-learned models.    |
+|  [Penzai](https://github.com/google-deepmind/penzai)  |   A JAX research toolkit for building, editing, and visualizing neural networks.    |
 
