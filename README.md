@@ -112,6 +112,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | [ Sparse autoencoders find highly interpretable features in language models (ICLR'24)](https://openreview.net/pdf?id=F76bwRSLeK) | SAE, Knockout, Visualization, Automated Explanation Score | Faithfulness | Discovered SAE features circuit for the closing parenthesis. |
 | [Circuit component reuse across tasks in transformer language models (ICLR'24)](https://arxiv.org/pdf/2310.08744) | Activation patching, Path patching, Visualization  | N/A | The paper showed that the same components are reused by different circuits to implement different tasks. |
 | [ Increasing trust in language models through the reuse of verified circuits](https://arxiv.org/pdf/2402.02619) | Mean-ablation, Visualization, PCA | N/A | The paper showed that the same components are reused by different circuits to implement different tasks. |
+| [ Knowledge Circuits in Pretrained Transformers](https://arxiv.org/pdf/2405.17969) | ACDC, Logit lens, Visualization | Completeness | Discovered Knowledge Circuits for factual-recall. |
 
 
 ##### Interpreting Transformer Components
