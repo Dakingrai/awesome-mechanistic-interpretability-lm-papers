@@ -31,6 +31,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 ```
 
 ## Updates
+- July 2024: We have finished the first iteration of the paper collection. **Contributions welcomed!**
 - June 2024: GitHub repository launched! Still under construction.
 
 ## Table of Contents
