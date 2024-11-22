@@ -191,7 +191,7 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | :----- | :-------------- |
 |  [CircuitsVis](https://github.com/TransformerLensOrg/CircuitsVis)  |  A library for attention visualization      | 
 |  [TransformerLens](https://github.com/TransformerLensOrg/TransformerLens)  |  A library for doing MI of GPT-2 Style language models.  | 
-|  [CircuitsVis](https://github.com/openai/transformer-debugger)  |  A tool that supports investigations into specific behaviors of small language models. The tool combines automated interpretability techniques with sparse autoencoders.     | 
+|  [Transformer Debugger](https://github.com/openai/transformer-debugger)  |  A tool that supports investigations into specific behaviors of small language models. The tool combines automated interpretability techniques with sparse autoencoders.     | 
 |  [LM Debugger](https://github.com/mega002/lm-debugger)  |  An open-source interactive tool for inspection and intervention in transformer-based language models.    | 
 |  [Neuroscope](https://neuroscope.io)  |  Repository of maximum activating dataset examples for each neuron in several LMs      | 
 |  [Neuronpedia](https://www.neuronpedia.org)  |  A platform for MI research, specifically focusing on SAEs, that allows researchers to host models, create feature dashboards, visualize data, and access various tools.     |
