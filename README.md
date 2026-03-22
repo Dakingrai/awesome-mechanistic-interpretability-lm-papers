@@ -184,8 +184,9 @@ We have also curated a **Beginner's Roadmap (Figure 2)** with actionable items f
 | [Eliciting latent predictions from transformers with the tuned lens](https://arxiv.org/pdf/2303.08112)| Logit Lens | Faithfulness, Extrinsic (Prompt injection detection) | Insights from circuit studies were used to detect prompt injection. |
 | [Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small](https://arxiv.org/pdf/2211.00593) | Mean-Ablation, Path Patching | Faithfulness, Completeness, Minimality, Extrinsic (Adversarial example generation) | Designing adversarial examples for the IOI task. |
 | [Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models](https://arxiv.org/pdf/2403.19647) | SAE, Activation Patching | Faithfulness, Completeness, Extrinsic (Improving classifier generalization) | The paper improved the generalization of classifiers by identifying and ablating spurious features that humans consider to be task-irrelevant. |
+| [DRIFT: Detecting Representational Inconsistencies for Factual Truthfulness (arXiv'26)](https://arxiv.org/pdf/2601.14210) | Probing | Extrinsic (Hallucination Detection) | The paper trains lightweight probes on mid-to-late layer hidden states to detect when an LLM is likely to hallucinate, finding that these layers encode uncertainty signals that are lost in the final token-space projection. |
 
-### Tools 
+### Tools
 ([Back to Table of Contents](#table-of-contents))
 |  Tool  |      TL;DR    | 
 | :----- | :-------------- |
